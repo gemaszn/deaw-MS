@@ -1,0 +1,5 @@
+#Ignora el directorio .vagrant
+.vagrant/
+
+#Ignora archivos de backup
+*~
