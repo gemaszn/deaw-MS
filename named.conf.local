@@ -12,7 +12,7 @@ zone "sistema.test" {
 // Zona inversa para 192.168.57.0/24
 zone "57.168.192.in-addr.arpa" {
     type master;  // Configuración del servidor maestro (tierra.sistema.test)
-    file "/etc/bind/db.192";  // Archivo de zona inversa
+    file "/etc/bind/db.127";  // Archivo de zona inversa
     allow-transfer { 192.168.57.102; };  // Permitir transferencia al esclavo (venus)
 };
 

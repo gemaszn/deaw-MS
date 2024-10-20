@@ -1,31 +1,28 @@
 options {
 	directory "/var/cache/bind";
 
-	// If there is a firewall between you and nameservers you want
-	// to talk to, you may need to fix the firewall to allow multiple
-	// ports to talk.  See http://www.kb.cert.org/vuls/id/800113
+	// Establecer la validación DNSSEC a yes
+    dnssec-validation yes;
 
-	// If your ISP provided one or more IP addresses for stable 
-	// nameservers, you probably want to use them as forwarders.  
-	// Uncomment the following block, and insert the addresses replacing 
-	// the all-0's placeholder.
+	// Solo escuchar en IPv4
+    listen-on { any; };
 
-	forwarders {
-	 	208.67.222.222; //OpenDNS
-	};
+	// Permitir consultas recursivas solo desde 127.0.0.0/8 y 192.168.57.0/24
+    acl "trusted" {
+        127.0.0.0/8; 
+        192.168.57.0/24; 
+    };
 
-	//========================================================================
-	// If BIND logs error messages about the root key being expired,
-	// you will need to update your keys.  See https://www.isc.org/bind-keys
-	//========================================================================
-	dnssec-validation yes;
+    recursion yes;
+    allow-recursion { trusted; };
 
-	listen-on { any; };          // Escuchar solo en IPv4
-    listen-on-v6 { none; };      // Desactivar IPv6
+	// Reenviar consultas no autorizadas a OpenDNS
+    forwarders {
+        208.67.222.222;
+    };
 
-	// Permitir consultas recursivas solo a las redes especificadas
-    allow-recursion { 127.0.0.0/8; 192.168.57.0/24; };
+	forward only;
 
-    // Tiempo en caché de respuestas negativas (2 horas)
-    max-ncache-ttl 7200;
+	// Tiempo en caché para respuestas negativas
+    negative-cache-ttl 7200; // 2 horas en segundos
 };
