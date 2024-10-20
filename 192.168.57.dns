@@ -1,0 +1,17 @@
+;
+; BIND reverse data file for local loopback interface
+;
+$TTL    86400
+@       IN      SOA     tierra.sistema.test. root.tierra.sistema.test. (
+                              1         ; Serial
+                              604800     ; Refresh
+                              86400      ; Retry
+                              2419200    ; Expire
+                              86400 )    ; Negative Cache TTL
+;
+@       IN      NS      tierra.sistema.test.
+@       IN      NS      venus.sistema.test.
+103     IN      PTR     tierra.sistema.test.
+102     IN      PTR     venus.sistema.test.
+101     IN      PTR     mercurio.sistema.test.
+104     IN      PTR     marte.sistema.test.
