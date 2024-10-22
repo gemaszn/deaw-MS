@@ -13,7 +13,7 @@ Vagrant.configure("2") do |config|
     tierra.vm.provision "shell", name: "dns-master", inline: <<-SHELL
       cp -v /vagrant/named /etc/default
       cp -v /vagrant/named.conf.options /etc/bind
-      cp -v /vagrant/named.conf.localmaster /etc/bind
+      cp -v /vagrant/named.conf.localmaster /etc/bind/named.conf.local
       cp -v /vagrant/sistema.test.dns /var/lib/bind
       cp -v /vagrant/192.168.57.dns /var/lib/bind
       systemctl reload named
@@ -28,7 +28,7 @@ Vagrant.configure("2") do |config|
     venus.vm.provision "shell", name: "dns-master", inline: <<-SHELL
       cp -v /vagrant/named /etc/default
       cp -v /vagrant/named.conf.options /etc/bind
-      cp -v /vagrant/named.conf.localslave /etc/bind
+      cp -v /vagrant/named.conf.localslave /etc/bind/named.conf.local
       systemctl reload named
       systemctl status named
     SHELL
