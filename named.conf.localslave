@@ -1,0 +1,17 @@
+//
+// Do any local configuration here
+//
+
+// Zona directa para sistema.test
+zone "sistema.test" {
+    type slave;  // Configuración del servidor esclavo (venus.sistema.test)
+    file "/var/cache/bind/db.sistema.test";  // Archivo de zona directa
+    masters { 192.168.57.103; };  // Dirección IP del servidor maestro (tierra)
+};
+
+// Zona inversa para 192.168.57.0/24
+zone "57.168.192.in-addr.arpa" {
+    type slave;  // Configuración del servidor esclavo (venus.sistema.test)
+    file "/var/cache/bind/db.192";  // Archivo de zona inversa
+    masters { 192.168.57.103; };  // Dirección IP del servidor maestro (tierra)
+};
