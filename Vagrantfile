@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
     venus.vm.network "private_network", ip: "192.168.57.102"
     venus.vm.hostname = "venus.sistema.test"
 
-    tierra.vm.provision "shell", name: "dns-master", inline: <<-SHELL
+    venus.vm.provision "shell", name: "dns-master", inline: <<-SHELL
       cp -v /vagrant/named /etc/default
       cp -v /vagrant/named.conf.options /etc/bind
       cp -v /vagrant/named.conf.localslave /etc/bind
