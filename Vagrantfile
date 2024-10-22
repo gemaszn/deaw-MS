@@ -13,8 +13,8 @@ Vagrant.configure("2") do |config|
     tierra.vm.provision "shell", name: "dns-master", inline: <<-SHELL
       cp -v /vagrant/named /etc/default
       cp -v /vagrant/named.conf.options /etc/bind
-      cp -v /vagrant/named.conf.local /etc/bind
-      cp -v /vagrant/tierra.sistema.test.dns /var/lib/bind
+      cp -v /vagrant/named.conf.localmaster /etc/bind
+      cp -v /vagrant/sistema.test.dns /var/lib/bind
       cp -v /vagrant/192.168.57.dns /var/lib/bind
       systemctl reload named
       systemctl status named
