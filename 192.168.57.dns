@@ -7,7 +7,7 @@ $TTL    86400
                               604800     ; Refresh
                               86400      ; Retry
                               2419200    ; Expire
-                              86400 )    ; Negative Cache TTL
+                              7200 )    ; Negative Cache TTL
 ;
 @       IN      NS      tierra.sistema.test.
 @       IN      NS      venus.sistema.test.

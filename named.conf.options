@@ -1,3 +1,10 @@
+// Permitir consultas recursivas solo desde 127.0.0.0/8 y 192.168.57.0/24
+acl trusted {
+    127.0.0.0/8; 
+    192.168.57.0/24; 
+};
+
+
 options {
 	directory "/var/cache/bind";
 
@@ -7,11 +14,6 @@ options {
 	// Solo escuchar en IPv4
     listen-on { any; };
 
-	// Permitir consultas recursivas solo desde 127.0.0.0/8 y 192.168.57.0/24
-    acl "trusted" {
-        127.0.0.0/8; 
-        192.168.57.0/24; 
-    };
 
     recursion yes;
     allow-recursion { trusted; };
@@ -22,7 +24,4 @@ options {
     };
 
 	forward only;
-
-	// Tiempo en caché para respuestas negativas
-    negative-cache-ttl 7200; // 2 horas en segundos
 };

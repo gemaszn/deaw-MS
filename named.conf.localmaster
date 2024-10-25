@@ -5,14 +5,14 @@
 // Zona directa para sistema.test
 zone "sistema.test" {
     type master;  // Configuración del servidor maestro (tierra.sistema.test)
-    file "/etc/bind/sistema.test.dns";  // Archivo de zona directa
+    file "/var/lib/bind/sistema.test.dns";  // Archivo de zona directa
     allow-transfer { 192.168.57.102; };  // Permitir transferencia al esclavo (venus)
 };
 
 // Zona inversa para 192.168.57.0/24
 zone "57.168.192.in-addr.arpa" {
     type master;  // Configuración del servidor maestro (tierra.sistema.test)
-    file "/etc/bind/192.168.57.dns";  // Archivo de zona inversa
+    file "/var/lib/bind/192.168.57.dns";  // Archivo de zona inversa
     allow-transfer { 192.168.57.102; };  // Permitir transferencia al esclavo (venus)
 };
 
