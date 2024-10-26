@@ -51,15 +51,25 @@ Este proyecto crea las siguientes configuraciones de DNS:
 2. **Resolución Inversa**: Confirmar que las direcciones IP se resuelven a los nombres de dominio.
 3. **Alias**: Validar que los alias están funcionando correctamente.
 
-1. (imagenes/Comprobacion1)
-2. (imagenes/Comprobacion2)
-3. (imagenes/Comprobacion3)
-4. (imagenes/Comprobacion4)
-5. (imagenes/Comprobacion5)
-6. (imagenes/Comprobacion6)
-7. (imagenes/Comprobacion7)
-8. (imagenes/Comprobacion8)
-9. (imagenes/Comprobacion9)
+- Consultas desde la MV maestra Tierra:
+1. **Consulta de registros A** ![Resuelve la IP de un nombre de dominio.](imagenes/Comprobacion1)
+
+2. **Consulta de resolución inversa** ![Resuelve el nombre de dominio a partir de una IP](imagenes/Comprobacion2)
+
+3. **Consulta de alias** ![Consulta alias](imagenes/Comprobacion3)
+
+4. **Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)** |[Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)](imagenes/Comprobacion4)
+
+- Consultas desde la MV esclava Venus:
+1. **Consulta de registros A** ![Resuelve la IP de un nombre de dominio.](imagenes/Comprobacion5)
+
+2. **Consulta de resolución inversa** ![Resuelve el nombre de dominio a partir de una IP](imagenes/Comprobacion6)
+
+3. **Consulta de alias** ![Consulta alias](imagenes/Comprobacion7)
+
+4. **Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)** |[Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)](imagenes/Comprobacion8)
+
+5.**Verificar transferencia de zona (AXFR) entre el servidor maestro y el esclavo:** ![Verificar transferencia de zona (AXFR) entre el servidor maestro y el esclavo](imagenes/Comprobacion9)
 
 ## Autores y Créditos
 Autor: Gema Sánchez Navarro
