@@ -58,7 +58,7 @@ Este proyecto crea las siguientes configuraciones de DNS:
 
 3. **Consulta de alias** ![Consulta alias](imagenes/Comprobacion3.png)
 
-4. **Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)** |[Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)](imagenes/Comprobacion4.png)
+4. **Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)** ![Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)](imagenes/Comprobacion4.png)
 
 - Consultas desde la MV esclava Venus:
 1. **Consulta de registros A** ![Resuelve la IP de un nombre de dominio.](imagenes/Comprobacion5.png)
@@ -67,7 +67,7 @@ Este proyecto crea las siguientes configuraciones de DNS:
 
 3. **Consulta de alias** ![Consulta alias](imagenes/Comprobacion7.png)
 
-4. **Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)** |[Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)](imagenes/Comprobacion8.png)
+4. **Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)** ![Consulta de servidores de nombres (NS) y de de registros MX (servidores de correo)](imagenes/Comprobacion8.png)
 
 5.**Verificar transferencia de zona (AXFR) entre el servidor maestro y el esclavo:** ![Verificar transferencia de zona (AXFR) entre el servidor maestro y el esclavo](imagenes/Comprobacion9.png)
 
