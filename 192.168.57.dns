@@ -9,9 +9,10 @@ $TTL    86400
                               2419200    ; Expire
                               7200 )    ; Negative Cache TTL
 ;
-@       IN      NS      tierra.sistema.test.
-@       IN      NS      venus.sistema.test.
-103     IN      PTR     tierra.sistema.test.
-102     IN      PTR     venus.sistema.test.
-101     IN      PTR     mercurio.sistema.test.
-104     IN      PTR     marte.sistema.test.
+@       IN      NS      tierra.sistema.test. 
+@       IN      NS      venus.sistema.test. 
+103     IN      PTR     tierra.sistema.test. 
+102     IN      PTR     venus.sistema.test. 
+101     IN      PTR     mercurio.sistema.test. 
+104     IN      PTR     marte.sistema.test. 
+

@@ -28,6 +28,7 @@ Vagrant.configure("2") do |config|
     venus.vm.provision "shell", name: "dns-slave", inline: <<-SHELL
       cp -v /vagrant/named.conf.options /etc/bind/
       cp -v /vagrant/named.conf.localslave /etc/bind/named.conf.local
+      cp -v /vagrant/resolv.confslave /etc/resolv.conf
       systemctl reload named
       systemctl status named
     SHELL

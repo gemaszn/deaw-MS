@@ -14,16 +14,18 @@ $TTL    86400
 ; Servidores de nombres
 @       IN      NS      tierra.sistema.test.
 @       IN      NS      venus.sistema.test.
+@       IN      MX      10 marte.sistema.test.
 
 ; Alias para los servidores de nombres
 ns1     IN      CNAME   tierra.sistema.test.
 ns2     IN      CNAME   venus.sistema.test.
 
 ; Alias para el correo
-mail    IN      MX   marte.sistema.test.
+mail    IN     CNAME   marte.sistema.test.
 
 ; Registros A para las máquinas
 tierra  IN      A       192.168.57.103
 venus   IN      A       192.168.57.102
 marte   IN      A       192.168.57.104
 mercurio IN     A       192.168.57.101
+
