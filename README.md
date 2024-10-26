@@ -36,20 +36,20 @@ Este proyecto crea las siguientes configuraciones de DNS:
   - **192.168.57.dns**: Zona inversa para la subred `192.168.57.0/24`.
 
 ## Contenido Final de los Archivos que Conforman el Proyecto
-1. **Archivo Vagrant**: Este archivo define la creación de las máquinas virtuales y su aprovisionamiento. Incluye la instalación de BIND y la copia de archivos de configuración desde el host. (imagenes/vagrant.png)
-2. **Archivo named.conf.options**: Configuración de la validación DNSSEC, consultas recursivas y reenviadores. (imagenes/options.png)
-3. **Archivo named.conf.localmaster**: Configuración de las zonas DNS para el maestro (imagenes/localmaster.png)
-4. **Archivo named.conf.localslave**: Configuración de las zonas DNS para el esclavo (imagenes/localslave.png)
-5. **Archivo sistema.test.dns**: Define la zona directa del dominio sistema.test con registros A y alias para los servidores de correo y de nombres. (imagenes/sistema.test.dns.png)
-6. **Archivo 192.168.57.dns**: Define la zona inversa para resolver IPs en la red 192.168.57.0/24. (imagenes/192.168.57.dns.png)
-7. **Archivo resolv.conf**: (imagenes/resolv.conf.png)
+1. **Archivo Vagrant**: ![Este archivo define la creación de las máquinas virtuales y su aprovisionamiento. Incluye la instalación de BIND y la copia de archivos de configuración desde el host.](imagenes/vagrant.png)
+2. **Archivo named.conf.options**: ![Configuración de la validación DNSSEC, consultas recursivas y reenviadores.](imagenes/options.png)
+3. **Archivo named.conf.localmaster**: ![Configuración de las zonas DNS para el maestro.](imagenes/localmaster.png)
+4. **Archivo named.conf.localslave**: ![Configuración de las zonas DNS para el esclavo.](imagenes/localslave.png)
+5. **Archivo sistema.test.dns**: ![Define la zona directa del dominio sistema.test con registros A y alias para los servidores de correo y de nombres.](imagenes/sistema.test.dns.png)
+6. **Archivo 192.168.57.dns**: ![Define la zona inversa para resolver IPs en la red 192.168.57.0/24.](imagenes/192.168.57.dns.png)
+7. **Archivo resolv.conf**: ![Especifica el nameserver.](imagenes/resolv.conf.png)
 
 ## Comprobaciones realizadas
 
 - Se han realizado las siguientes pruebas para verificar la correcta configuración del servidor DNS:
 1. **Registro A**: Verificar que los registros A resuelven correctamente a las direcciones IP.
 2. **Resolución Inversa**: Confirmar que las direcciones IP se resuelven a los nombres de dominio.
-3. 3. **Alias**: Validar que los alias están funcionando correctamente.
+3. **Alias**: Validar que los alias están funcionando correctamente.
 
 1. (imagenes/Comprobacion1)
 2. (imagenes/Comprobacion2)
